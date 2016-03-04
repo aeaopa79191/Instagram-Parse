@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -24,7 +25,44 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func onSignIn(sender: AnyObject) {
+        let username = usernameField.text ?? ""
+        let password = passwordField.text ?? ""
+        
+        PFUser.logInWithUsernameInBackground(username, password: password) { (user: PFUser?, error: NSError?) -> Void in
+            if let error = error {
+                print("User login failed.")
+                print(error.localizedDescription)
+            } else {
+                print("User logged in successfully")
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                // display view controller that needs to shown after successful login
+            }
+        }
+    }
+    
+    @IBAction func onSignUp(sender: AnyObject) {
+        // initialize a user object
+        let newUser = PFUser()
+        
+        // set user properties
+        newUser.username = usernameField.text
+        newUser.password = passwordField.text
+        
+        // call sign up function on the object
+        newUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("User Registered successfully")
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                // manually segue to logged in view
+            }
+        }
+    }
 
+    
     /*
     // MARK: - Navigation
 
