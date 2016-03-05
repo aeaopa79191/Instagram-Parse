@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4F57FB1C8A83F500B748FB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */; };
 		BEBEBD601C869B3E00E6A010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */; };
 		BEBEBD621C869B3E00E6A010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEBD611C869B3E00E6A010 /* ViewController.swift */; };
 		BEBEBD651C869B3E00E6A010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEBD631C869B3E00E6A010 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		560F7A3DA4E4CB4A795CDBEE /* Pods-Instagram Parse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram Parse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram Parse/Pods-Instagram Parse.debug.xcconfig"; sourceTree = "<group>"; };
 		623FCE0C8DB7A902BA333FB2 /* Pods_Instagram_Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_Parse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BEBEBD5C1C869B3E00E6A010 /* Instagram Parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Parse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEBD611C869B3E00E6A010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				BEBEBD681C869B3E00E6A010 /* LaunchScreen.storyboard */,
 				BEBEBD6B1C869B3E00E6A010 /* Info.plist */,
 				BEBEBD711C86B0C000E6A010 /* LoginViewController.swift */,
+				BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */,
 			);
 			path = "Instagram Parse";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				BEBEBD721C86B0C000E6A010 /* LoginViewController.swift in Sources */,
 				BEBEBD621C869B3E00E6A010 /* ViewController.swift in Sources */,
+				BE4F57FB1C8A83F500B748FB /* ProfileViewController.swift in Sources */,
 				BEBEBD601C869B3E00E6A010 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

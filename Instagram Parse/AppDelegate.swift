@@ -13,8 +13,8 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.initializeWithConfiguration(
@@ -22,6 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.applicationId = "Instagram"
                 configuration.clientKey = "GFCVBNJKJHGFCBNMKJHGV987654345YU"
                 configuration.server = "https://immense-escarpment-69839.herokuapp.com/parse"
+                
+                    // check if user is logged in.
+                    if PFUser.currentUser() != nil {
+                        let vc = self.storyboard.instantiateViewControllerWithIdentifier("Tab") as!UITabBarController
+                        self.window?.rootViewController = vc
+                        
+                    }
+                
+//                if User.currentUser != nil {
+//                    // Got to the logged in screen
+//                    print("Current user detected: \(User.currentUser?.name)")
+//                    var vc = storyboard.instantiateViewControllerWithIdentifier("TabCon") as!UITabBarController
+//                    window?.rootViewController = vc
+//                }
+                
+                
             }))
         return true
     }
