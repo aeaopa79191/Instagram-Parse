@@ -52,23 +52,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="366"/>
+            <point key="canvasLocation" x="-210" y="220"/>
         </scene>
         <!--Capture-->
         <scene sceneID="NFE-Ld-XpL">
             <objects>
-                <viewController storyboardIdentifier="Home" id="yAV-cu-1cg" sceneMemberID="viewController">
+                <viewController id="yAV-cu-1cg" customClass="CaptureViewController" customModule="Instagram_Parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCd-h9-fMl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="379-Ag-g3e">
+                                <rect key="frame" x="136" y="403" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="yAV-cu-1cg" eventType="touchUpInside" id="rvf-BI-a2p"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="eo0-US-IPy">
+                                <rect key="frame" x="40" y="284" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to take or select a photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wfh-SB-1Ts">
+                                <rect key="frame" x="6" y="44" width="309" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96405460858585856" green="0.96405460858585856" blue="0.96405460858585856" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Oih-w9-w2J">
+                                <rect key="frame" x="6" y="44" width="309" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Capture" id="XjC-9a-oLI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="captionField" destination="eo0-US-IPy" id="bAa-wq-MHp"/>
+                        <outlet property="profileImageView" destination="Oih-w9-w2J" id="kRA-kv-VUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6X-7i-gcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="1235"/>
+            <point key="canvasLocation" x="269" y="1208"/>
         </scene>
         <!--Home-->
         <scene sceneID="yZN-Tk-Hac">
@@ -83,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIs-KL-fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="1262"/>
+            <point key="canvasLocation" x="-352" y="1208"/>
         </scene>
         <!--Profile-->
         <scene sceneID="e5m-H1-2xT">
@@ -106,10 +138,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="Olh-31-aW3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="logoutSegue" id="BwM-G8-w6P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7h-g5-Vzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="1222"/>
+            <point key="canvasLocation" x="892" y="1208"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cVc-Rl-CCS">
@@ -128,7 +163,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YvS-YE-jL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="372"/>
+            <point key="canvasLocation" x="628" y="234"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController {
 
@@ -23,6 +24,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func onLogout(sender: AnyObject) {
         PFUser.logOut()
+        self.performSegueWithIdentifier("logoutSegue", sender: nil)
     }
 
     /*
