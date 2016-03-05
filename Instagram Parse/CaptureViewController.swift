@@ -29,7 +29,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Dispose of any resources that can be recreated.
     }
     
-    //Picking a Picture from the Camera Roll
+    //Step 1: Picking a Picture from the Camera Roll
     func imageTapped(img: AnyObject)
     {
         let vc = UIImagePickerController()
@@ -39,6 +39,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    //Step 2: Implement the delegate
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
             let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -49,6 +50,7 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
             })
     }
     
+    //Resizing an Image, has not been called
     func resize(image: UIImage, newSize: CGSize) -> UIImage {
         let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
         resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -61,19 +63,19 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         return newImage
     }
     
-    @IBAction func onSubmit(sender: AnyObject) {
-        UserMedia.postUserImage(profileImageView.image, withCaption: captionField.text) { (success: Bool, error: NSError?) -> Void in
-            if success {
-                print("Posted to Parse")
-                self.profileImageView.image = nil
-                self.captionField.text = ""
-                
-            }
-            else {
-                print("Can't post to parse")
-            }
-        }
-    }
+//    @IBAction func onSubmit(sender: AnyObject) {
+//        UserMedia.postUserImage(profileImageView.image, withCaption: captionField.text) { (success: Bool, error: NSError?) -> Void in
+//            if success {
+//                print("Posted to Parse")
+//                self.profileImageView.image = nil
+//                self.captionField.text = ""
+//                
+//            }
+//            else {
+//                print("Can't post to parse")
+//            }
+//        }
+//    }
 
     /*
     // MARK: - Navigation
