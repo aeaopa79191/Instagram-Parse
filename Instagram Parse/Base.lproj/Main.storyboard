@@ -68,6 +68,7 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="onSubmit:" destination="yAV-cu-1cg" eventType="touchUpInside" id="Qec-ph-bFO"/>
+                                    <segue destination="eUs-ct-x7b" kind="modal" id="Tgy-rL-YDT"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="eo0-US-IPy">
@@ -96,11 +97,12 @@
                     <connections>
                         <outlet property="captionField" destination="eo0-US-IPy" id="bAa-wq-MHp"/>
                         <outlet property="profileImageView" destination="Oih-w9-w2J" id="kRA-kv-VUR"/>
+                        <outlet property="submitbutton" destination="379-Ag-g3e" id="RVH-8P-WOM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6X-7i-gcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="1208"/>
+            <point key="canvasLocation" x="1227" y="148"/>
         </scene>
         <!--Home-->
         <scene sceneID="yZN-Tk-Hac">
@@ -115,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIs-KL-fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352" y="1208"/>
+            <point key="canvasLocation" x="-250" y="1208"/>
         </scene>
         <!--Profile-->
         <scene sceneID="e5m-H1-2xT">
@@ -166,4 +168,7 @@
             <point key="canvasLocation" x="628" y="234"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tgy-rL-YDT"/>
+    </inferredMetricsTieBreakers>
 </document>

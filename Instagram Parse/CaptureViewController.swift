@@ -11,8 +11,9 @@ import UIKit
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var captionField: UITextField!
+    @IBOutlet weak var submitbutton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,19 +65,19 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
-//    @IBAction func onSubmit(sender: AnyObject) {
-//        UserMedia.postUserImage(profileImageView.image, withCaption: captionField.text) { (success: Bool, error: NSError?) -> Void in
-//            if success {
-//                print("Posted to Parse")
-//                self.profileImageView.image = nil
-//                self.captionField.text = ""
-//            }
-//            else {
-//                print("Can't post to parse")
-//            }
-//        }
-//    }
-
+    @IBAction func onSubmit(sender: AnyObject) {
+        Post.postUserImage(profileImageView.image, withCaption: captionField.text) { (success: Bool, error: NSError?) -> Void in
+            if success {
+                print("Posted to Parse")
+                self.profileImageView.image = nil
+                self.captionField.text = ""
+            }
+            else {
+                print("Can't post to parse")
+//                self.submitbutton.enabled = false
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
