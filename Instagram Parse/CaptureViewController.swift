@@ -44,7 +44,6 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
             let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-            
             profileImageView.image = editedImage
             dismissViewControllerAnimated(true, completion: { () -> Void in
             })
@@ -63,13 +62,14 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         return newImage
     }
     
+    
+    
 //    @IBAction func onSubmit(sender: AnyObject) {
 //        UserMedia.postUserImage(profileImageView.image, withCaption: captionField.text) { (success: Bool, error: NSError?) -> Void in
 //            if success {
 //                print("Posted to Parse")
 //                self.profileImageView.image = nil
 //                self.captionField.text = ""
-//                
 //            }
 //            else {
 //                print("Can't post to parse")

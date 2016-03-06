@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="onSubmit:" destination="yAV-cu-1cg" eventType="touchUpInside" id="rvf-BI-a2p"/>
+                                    <action selector="onSubmit:" destination="yAV-cu-1cg" eventType="touchUpInside" id="Qec-ph-bFO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="eo0-US-IPy">

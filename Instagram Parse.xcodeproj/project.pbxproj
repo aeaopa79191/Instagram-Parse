@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE4F57FB1C8A83F500B748FB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */; };
 		BE4F57FD1C8AA1C000B748FB /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F57FC1C8AA1C000B748FB /* CaptureViewController.swift */; };
+		BE4F58001C8BA74000B748FB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F57FF1C8BA74000B748FB /* Post.swift */; };
 		BEBEBD601C869B3E00E6A010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */; };
 		BEBEBD621C869B3E00E6A010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEBD611C869B3E00E6A010 /* ViewController.swift */; };
 		BEBEBD651C869B3E00E6A010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEBD631C869B3E00E6A010 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		623FCE0C8DB7A902BA333FB2 /* Pods_Instagram_Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_Parse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BE4F57FC1C8AA1C000B748FB /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		BE4F57FF1C8BA74000B748FB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BEBEBD5C1C869B3E00E6A010 /* Instagram Parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Parse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEBD611C869B3E00E6A010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,9 +57,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BE4F57FE1C8BA64F00B748FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE4F57FF1C8BA74000B748FB /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BEBEBD531C869B3E00E6A010 = {
 			isa = PBXGroup;
 			children = (
+				BE4F57FE1C8BA64F00B748FB /* Model */,
 				BEBEBD5E1C869B3E00E6A010 /* Instagram Parse */,
 				BEBEBD5D1C869B3E00E6A010 /* Products */,
 				384D47BD617EEEC80A2A8A88 /* Pods */,
@@ -222,6 +233,7 @@
 				BEBEBD721C86B0C000E6A010 /* LoginViewController.swift in Sources */,
 				BEBEBD621C869B3E00E6A010 /* ViewController.swift in Sources */,
 				BE4F57FB1C8A83F500B748FB /* ProfileViewController.swift in Sources */,
+				BE4F58001C8BA74000B748FB /* Post.swift in Sources */,
 				BEBEBD601C869B3E00E6A010 /* AppDelegate.swift in Sources */,
 				BE4F57FD1C8AA1C000B748FB /* CaptureViewController.swift in Sources */,
 			);
