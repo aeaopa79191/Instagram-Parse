@@ -7,41 +7,107 @@
 //
 
 import UIKit
+import Parse
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
+    var mediaArr: [PFObject]?
+    var refreshControl:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-
+        //tableView.estimatedRowHeight = 220.0
+        //tableView.rowHeight = 520;
+        
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
+        
+        let query = PFQuery(className: "Post")
+        query.orderByDescending("_created_at")
+        query.limit = 20
+        
+        query.findObjectsInBackgroundWithBlock { (post: [PFObject]?, error: NSError?) -> Void in
+            if post != nil {
+                self.mediaArr = post
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+        
+        self.tableView.reloadData()
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if mediaArr != nil {
+            return mediaArr!.count
+        }
+        else {
+            return 0
+        }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! PostCell
+        let media = mediaArr![indexPath.row]
+        cell.captionLabel.text = media["caption"] as? String
+        let userImageFile = media["media"] as! PFFile
+        userImageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+            if error == nil {
+                if let imageData = imageData {
+                    let image = UIImage(data:imageData)
+                    cell.postImage.image = image
+                    print("I am herer")
+                }
+            }
+        }
+        return cell
     }
-
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func refresh(sender: AnyObject) {
+        let query = PFQuery(className: "Post")
+        query.orderByDescending("_created_at")
+        query.limit = 20
+        
+        query.findObjectsInBackgroundWithBlock { (post: [PFObject]?, error: NSError?) -> Void in
+            if post != nil {
+                self.mediaArr = post
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+        self.refreshControl.endRefreshing()
     }
-    */
-
+    
+    @IBAction func logOutClicked(sender: AnyObject) {
+        PFUser.logOutInBackgroundWithBlock { (error: NSError?) -> Void in
+            if error == nil {
+                print("User logged out")
+                self.performSegueWithIdentifier("logOutSegueID", sender: nil)
+            }
+            else {
+                print("Error while logging out")
+            }
+        }
+        
+    }
+    
+    
 }

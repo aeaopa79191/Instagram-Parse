@@ -117,7 +117,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="9a7-Q1-2EM" customClass="PostCell" customModule="Instagram_Parse" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="215" id="9a7-Q1-2EM" customClass="PostCell" customModule="Instagram_Parse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9a7-Q1-2EM" id="Lw2-vT-oSd">
@@ -138,7 +138,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="caption" destination="67I-tZ-pGr" id="iei-Pl-qcw"/>
+                                            <outlet property="captionLabel" destination="67I-tZ-pGr" id="Ylr-fn-msV"/>
                                             <outlet property="postImage" destination="GHw-p6-nL8" id="rks-Zc-Lr9"/>
                                         </connections>
                                     </tableViewCell>
@@ -148,6 +148,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="X92-p1-gp4"/>
+                    <connections>
+                        <outlet property="tableView" destination="nbh-Lh-JWp" id="hea-3l-xJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIs-KL-fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
