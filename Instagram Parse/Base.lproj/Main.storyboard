@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-210" y="220"/>
+            <point key="canvasLocation" x="10" y="234"/>
         </scene>
         <!--Capture-->
         <scene sceneID="NFE-Ld-XpL">
@@ -102,22 +102,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6X-7i-gcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227" y="148"/>
+            <point key="canvasLocation" x="849" y="1208"/>
         </scene>
         <!--Home-->
         <scene sceneID="yZN-Tk-Hac">
             <objects>
-                <viewController storyboardIdentifier="Home" id="dWE-DU-DYj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="dWE-DU-DYj" customClass="HomeViewController" customModule="Instagram_Parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="km3-Ly-HpE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="215" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbh-Lh-JWp">
+                                <rect key="frame" x="0.0" y="20" width="320" height="497"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="9a7-Q1-2EM" customClass="PostCell" customModule="Instagram_Parse" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="215"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9a7-Q1-2EM" id="Lw2-vT-oSd">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="GHw-p6-nL8">
+                                                    <rect key="frame" x="8" y="-9" width="304" height="170"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="67I-tZ-pGr">
+                                                    <rect key="frame" x="8" y="169" width="304" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="67I-tZ-pGr" id="iei-Pl-qcw"/>
+                                            <outlet property="postImage" destination="GHw-p6-nL8" id="rks-Zc-Lr9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="X92-p1-gp4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIs-KL-fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-250" y="1208"/>
+            <point key="canvasLocation" x="296" y="1208"/>
         </scene>
         <!--Profile-->
         <scene sceneID="e5m-H1-2xT">
@@ -146,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7h-g5-Vzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="1208"/>
+            <point key="canvasLocation" x="1460" y="1110"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cVc-Rl-CCS">
