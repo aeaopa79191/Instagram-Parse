@@ -20,11 +20,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
         //tableView.estimatedRowHeight = 220.0
         //tableView.rowHeight = 520;
-        
         //tableView.rowHeight = UITableViewAutomaticDimension
         
+
+        //Using a Basic UIRefreshControl
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
@@ -73,7 +75,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let imageData = imageData {
                     let image = UIImage(data:imageData)
                     cell.postImage.image = image
-                    print("I am herer")
                 }
             }
         }
@@ -95,19 +96,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         self.refreshControl.endRefreshing()
     }
-    
-    @IBAction func logOutClicked(sender: AnyObject) {
-        PFUser.logOutInBackgroundWithBlock { (error: NSError?) -> Void in
-            if error == nil {
-                print("User logged out")
-                self.performSegueWithIdentifier("logOutSegueID", sender: nil)
-            }
-            else {
-                print("Error while logging out")
-            }
-        }
-        
-    }
+//    
+//    @IBAction func logOutClicked(sender: AnyObject) {
+//        PFUser.logOutInBackgroundWithBlock { (error: NSError?) -> Void in
+//            if error == nil {
+//                print("User logged out")
+//                self.performSegueWithIdentifier("logOutSegueID", sender: nil)
+//            }
+//            else {
+//                print("Error while logging out")
+//            }
+//        }
+//    
+//    }
     
     
 }
