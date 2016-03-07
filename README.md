@@ -31,12 +31,14 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 1. How can it go to home page after successfully submit a post?
 2. How can it automatically refresh the home page after successfully submit a post?
+3. How to hide password?
+4. How to set hitting return key to login after typign password?
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Walkthrough](instagram.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
