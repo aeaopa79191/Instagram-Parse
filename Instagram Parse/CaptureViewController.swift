@@ -74,7 +74,6 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             else {
                 print("Can't post to parse")
-//                self.submitbutton.enabled = false
             }
         }
     }

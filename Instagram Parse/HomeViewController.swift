@@ -96,19 +96,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         self.refreshControl.endRefreshing()
     }
-//    
-//    @IBAction func logOutClicked(sender: AnyObject) {
-//        PFUser.logOutInBackgroundWithBlock { (error: NSError?) -> Void in
-//            if error == nil {
-//                print("User logged out")
-//                self.performSegueWithIdentifier("logOutSegueID", sender: nil)
-//            }
-//            else {
-//                print("Error while logging out")
-//            }
-//        }
-//    
-//    }
-    
-    
 }
