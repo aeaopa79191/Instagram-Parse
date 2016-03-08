@@ -68,7 +68,6 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="onSubmit:" destination="yAV-cu-1cg" eventType="touchUpInside" id="Qec-ph-bFO"/>
-                                    <segue destination="eUs-ct-x7b" kind="modal" id="Tgy-rL-YDT"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="eo0-US-IPy">
@@ -102,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6X-7i-gcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="1208"/>
+            <point key="canvasLocation" x="745" y="1296"/>
         </scene>
         <!--Home-->
         <scene sceneID="yZN-Tk-Hac">
@@ -202,10 +201,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YvS-YE-jL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="234"/>
+            <point key="canvasLocation" x="1350" y="246"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pKd-we-Thl"/>
-    </inferredMetricsTieBreakers>
 </document>
