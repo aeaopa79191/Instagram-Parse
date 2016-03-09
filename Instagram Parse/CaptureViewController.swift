@@ -5,10 +5,9 @@
 //  Created by KaKin Chiu on 3/4/16.
 //  Copyright © 2016 KaKinChiu. All rights reserved.
 //
-
 import UIKit
 
-class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CaptureViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate{
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var captionField: UITextField!
@@ -71,11 +70,15 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("Posted to Parse")
                 self.profileImageView.image = nil
                 self.captionField.text = ""
+                self.tabBarController?.selectedIndex  = 0
+        //HomeViewController.refresh(<#T##HomeViewController#>)
             }
             else {
                 print("Can't post to parse")
             }
+//            self.tabBarController?.selectedIndex  = 0
         }
+//        self.tabBarController?.selectedIndex  = 0
     }
     /*
     // MARK: - Navigation

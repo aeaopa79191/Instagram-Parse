@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6X-7i-gcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="1296"/>
+            <point key="canvasLocation" x="680" y="1171"/>
         </scene>
         <!--Home-->
         <scene sceneID="yZN-Tk-Hac">
@@ -182,7 +182,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7h-g5-Vzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="1208"/>
+            <point key="canvasLocation" x="1128" y="1171"/>
+        </scene>
+        <!--Capture2-->
+        <scene sceneID="nyA-K6-The">
+            <objects>
+                <viewController id="jU4-tj-Row" customClass="Capture2ViewController" customModule="Instagram_Parse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qui-Lp-G1D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Capture2" id="3dD-aK-jCU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e31-gV-3Vf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="1171"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cVc-Rl-CCS">
@@ -197,6 +213,7 @@
                         <segue destination="dWE-DU-DYj" kind="relationship" relationship="viewControllers" id="ykc-ey-bzP"/>
                         <segue destination="yAV-cu-1cg" kind="relationship" relationship="viewControllers" id="PWk-9h-d24"/>
                         <segue destination="0gD-DZ-GUT" kind="relationship" relationship="viewControllers" id="Cid-uc-DPQ"/>
+                        <segue destination="jU4-tj-Row" kind="relationship" relationship="viewControllers" id="SKg-bv-p6h"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YvS-YE-jL9" userLabel="First Responder" sceneMemberID="firstResponder"/>

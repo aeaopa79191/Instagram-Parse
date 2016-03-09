@@ -12,6 +12,7 @@
 		BE4F58001C8BA74000B748FB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F57FF1C8BA74000B748FB /* Post.swift */; };
 		BE4F58021C8BC04500B748FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F58011C8BC04500B748FB /* HomeViewController.swift */; };
 		BE4F58041C8BC0DE00B748FB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F58031C8BC0DE00B748FB /* PostCell.swift */; };
+		BE4FF3C41C8FDE310035BC31 /* Capture2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4FF3C31C8FDE310035BC31 /* Capture2ViewController.swift */; };
 		BEBEBD601C869B3E00E6A010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */; };
 		BEBEBD621C869B3E00E6A010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEBD611C869B3E00E6A010 /* ViewController.swift */; };
 		BEBEBD651C869B3E00E6A010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEBD631C869B3E00E6A010 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		BE4F57FF1C8BA74000B748FB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BE4F58011C8BC04500B748FB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BE4F58031C8BC0DE00B748FB /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		BE4FF3C31C8FDE310035BC31 /* Capture2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capture2ViewController.swift; sourceTree = "<group>"; };
 		BEBEBD5C1C869B3E00E6A010 /* Instagram Parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Parse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEBD611C869B3E00E6A010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,18 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		BE4FF3C01C8FDBCB0035BC31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEBEBD711C86B0C000E6A010 /* LoginViewController.swift */,
+				BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */,
+				BE4F57FC1C8AA1C000B748FB /* CaptureViewController.swift */,
+				BE4FF3C31C8FDE310035BC31 /* Capture2ViewController.swift */,
+				BE4F58011C8BC04500B748FB /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		BEBEBD531C869B3E00E6A010 = {
 			isa = PBXGroup;
 			children = (
@@ -91,16 +105,13 @@
 		BEBEBD5E1C869B3E00E6A010 /* Instagram Parse */ = {
 			isa = PBXGroup;
 			children = (
+				BE4FF3C01C8FDBCB0035BC31 /* ViewControllers */,
 				BEBEBD5F1C869B3E00E6A010 /* AppDelegate.swift */,
 				BEBEBD611C869B3E00E6A010 /* ViewController.swift */,
 				BEBEBD631C869B3E00E6A010 /* Main.storyboard */,
 				BEBEBD661C869B3E00E6A010 /* Assets.xcassets */,
 				BEBEBD681C869B3E00E6A010 /* LaunchScreen.storyboard */,
 				BEBEBD6B1C869B3E00E6A010 /* Info.plist */,
-				BEBEBD711C86B0C000E6A010 /* LoginViewController.swift */,
-				BE4F57FA1C8A83F500B748FB /* ProfileViewController.swift */,
-				BE4F57FC1C8AA1C000B748FB /* CaptureViewController.swift */,
-				BE4F58011C8BC04500B748FB /* HomeViewController.swift */,
 				BE4F58031C8BC0DE00B748FB /* PostCell.swift */,
 			);
 			path = "Instagram Parse";
@@ -243,6 +254,7 @@
 				BEBEBD601C869B3E00E6A010 /* AppDelegate.swift in Sources */,
 				BE4F58021C8BC04500B748FB /* HomeViewController.swift in Sources */,
 				BE4F57FD1C8AA1C000B748FB /* CaptureViewController.swift in Sources */,
+				BE4FF3C41C8FDE310035BC31 /* Capture2ViewController.swift in Sources */,
 				BE4F58041C8BC0DE00B748FB /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
