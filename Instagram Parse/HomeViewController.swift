@@ -16,6 +16,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var mediaArr: [PFObject]?
     var refreshControl:UIRefreshControl!
     
+   // NSUerDefault
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

@@ -13,7 +13,6 @@ class Capture2ViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageTapped()
-
         // Do any additional setup after loading the view.
     }
     
@@ -60,7 +59,6 @@ class Capture2ViewController: UIViewController, UIImagePickerControllerDelegate,
     */
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        print("diu")
         self.tabBarController?.selectedIndex  = 0
         dismissViewControllerAnimated(true, completion: nil)
     }
