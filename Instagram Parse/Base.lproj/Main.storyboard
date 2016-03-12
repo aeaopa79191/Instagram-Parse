@@ -196,7 +196,7 @@
                     <tabBarItem key="tabBarItem" title="Capture2" id="3dD-aK-jCU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="wtT-4O-Pvq" kind="push" id="h9i-e7-eIw"/>
+                        <segue destination="wtT-4O-Pvq" kind="modal" identifier="gotoFilter" id="h9i-e7-eIw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e31-gV-3Vf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rji-aC-d7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="1171"/>
+            <point key="canvasLocation" x="2002" y="1171"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cVc-Rl-CCS">

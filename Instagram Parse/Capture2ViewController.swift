@@ -38,7 +38,10 @@ class Capture2ViewController: UIViewController, UIImagePickerControllerDelegate,
            // let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             //profileImageView.image = editedImage
             dismissViewControllerAnimated(true, completion: { () -> Void in
+                self.performSegueWithIdentifier("gotoFilter", sender:nil)
+
             })
+            
     }
 
 
